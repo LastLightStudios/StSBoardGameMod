@@ -54,7 +54,7 @@ public class BGMindBlast extends AbstractBGCard {
     public void applyPowers() {
         this.baseDamage = AbstractDungeon.player.hand.size();
         if(AbstractDungeon.player.hand.contains(this))this.baseDamage-=1;
-        if (this.upgraded) this.baseDamage+=1;
+        if (this.upgraded) this.baseDamage+=magicNumber;
         super.applyPowers();
         if (!this.upgraded) {
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
